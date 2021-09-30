@@ -1,0 +1,18 @@
+<template>
+    <template if:true={objectInfo}>
+        <lightning-card  title={cardTitle}>
+            <lightning-datatable
+                hide-checkbox-column="true"
+                show-row-number-column="true"
+                data={fields}
+                columns={columns}
+                key-field="id"
+                onrowselection={getSelectedName}
+                default-sort-direction={defaultSortDirection}
+                sorted-direction={sortDirection}
+                sorted-by={sortedBy}
+                onsort={handleSort}>
+            </lightning-datatable>
+        </lightning-card>
+    </template>
+</template>
